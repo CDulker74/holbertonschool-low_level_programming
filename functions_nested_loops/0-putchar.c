@@ -1,18 +1,20 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void) {
-char *str = "_putchar";
-    
-while (*str) {
-_putchar(*str);
-str++;
+* main - Entry point
+*
+* Return: Always 0 (Success)
+*/
+int main(void)
+{
+char str[] = "_putchar";
+int i;
+
+for (i = 0; str[i] != '\0'; i++)
+{
+_putchar(str[i]);
 }
-    
-_putchar('\n'); // Print a new line
-return 0;
+_putchar('\n');
+
+return (0);
 }
