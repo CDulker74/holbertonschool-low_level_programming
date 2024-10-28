@@ -5,7 +5,7 @@
 */
 void more_numbers(void)
 {
-sh: 1: wq: not found
+  int i, j, num;
 
 for (i = 0; i < 10; i++)
 {
