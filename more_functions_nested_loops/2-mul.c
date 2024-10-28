@@ -6,7 +6,7 @@
 * @b: deuxieme entier
 * Return: le resultat de la multiplication
 */
-int mul (int a, int b)
+int mul(int a, int b)
 {
 return (a * b);
 }
