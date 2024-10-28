@@ -1,1 +1,11 @@
-(setq debug-on-error t)
+#include "main.h"
+
+/**
+* more_numbers - affiche 10 fois les nombres de 0 à 14
+*/
+void more_numbers(void)
+{
+  int i, j, num;
+
+for (i = 0; i < 10; i++)
+{
