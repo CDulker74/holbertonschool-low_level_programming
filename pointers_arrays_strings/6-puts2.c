@@ -1,10 +1,10 @@
 #include "main.h"
 
+/**
+ * puts2 - imprime un caractère sur deux d'une chaîne
+ * @str: la chaîne à traiter
+ */
 void puts2(char *str)
-{
-	input_string[ ::2]
-}
-
 {
 	int i = 0;
 
@@ -12,10 +12,9 @@ void puts2(char *str)
 	{
 		if (i % 2 == 0)
 		{
-			_putchar void puts2(char *str)
+			_putchar(str[i]);
 		}
 		i++;
 	}
-
-	_putchar ('\n');
+	_putchar('\n');
 }
