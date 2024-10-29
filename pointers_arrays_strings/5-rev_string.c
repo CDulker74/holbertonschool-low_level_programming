@@ -6,29 +6,27 @@
  */
 void rev_string(char *s)
 {
-    int longueur = 0;
-    int debut = 0;
-    int fin;
-    char temp;
+	int longueur = 0;
+	int debut = 0;
+	int fin;
+	char temp;
 
-    /* Calculer la longueur de la chaîne */
-    while (s[longueur] != '\0')
-        longueur++;
+	/* Calculer la longueur de la chaîne */
+	while (s[longueur] != '\0')
+		longueur++;
 
-    fin = longueur - 1;
+	fin = longueur - 1;
 
-    /* Inverser la chaîne */
-    while (debut < fin)
-    {
-        /* Échanger les caractères */
-        temp = s[debut];
-        s[debut] = s[fin];
-        s[fin] = temp;
+	/* Inverser la chaîne */
+	while (debut < fin)
+	{
+		/* Échanger les caractères */
+		temp = s[debut];
+		s[debut] = s[fin];
+		s[fin] = temp;
 
-        /* Déplacer les indices */
-        debut++;
-        fin--;
-    }
+		/* Déplacer les indices */
+		debut++;
+		fin--;
+	}
 }
-
-
