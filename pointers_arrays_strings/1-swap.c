@@ -6,7 +6,7 @@
 * '*a = *b;' on assigne la valeur point√e par 'b' a l'adresse point√e 'a' 
 * *b = temp; : On assigne la valeur temporaire (l'ancienne valeur de a) √† l'adresse point√©e pa
 */
-oid swap_int(int *a, int *b)
+void swap_int(int *a, int *b)
 {
 int temp;
 
