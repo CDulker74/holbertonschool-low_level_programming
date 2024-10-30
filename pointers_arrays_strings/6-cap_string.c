@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * is_separator - vérifie si un caractère est un séparateur de mots
- * @c: caractère à vérifier
- * Return: 1 si c'est un séparateur, 0 sinon
+ * is_separator - vérifie si un caractère est un séparateur de m
+ * @c: caractère à vérif
+ * Return: 1 si c'est un séparateur, 0 sino
  */
 int is_separator(char c)
 {
@@ -19,9 +19,9 @@ int is_separator(char c)
 }
 
 /**
- * cap_string - met en majuscule la première lettre de chaque mot
- * @str: chaîne à modifier
- * Return: pointeur vers la chaîne modifiée
+ * cap_string - met en majuscule la première lettre de chaque mo
+ * @str: chaîne à modifi
+ * Return: pointeur vers la chaîne modifi�
  */
 char *cap_string(char *str)
 {
@@ -40,4 +40,4 @@ char *cap_string(char *str)
 	}
 
 	return (str);
-} 
+}
