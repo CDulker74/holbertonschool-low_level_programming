@@ -1,28 +1,20 @@
-#include "main.h"
-
-/**
- * leet - encode une chaîne en 1337
- * @str: chaîne à encod
- *
- * Return: pointeur vers la chaîne encod�
- */
-char *leet(char *str)
+char *leet(char *s)
 {
 	int i, j;
-	char letters[] = "aAeEoOtTlL";
-	char numbers[] = "4433007711";
+	char leet_letters[] = "aAeEoOtTlL";
+	char leet_numbers[] = "4433007711";
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; leet_letters[j] != '\0'; j++)
 		{
-			if (str[i] == letters[j])
+			if (s[i] == leet_letters[j])
 			{
-				str[i] = numbers[j];
+				s[i] = leet_numbers[j];
 				break;
 			}
 		}
 	}
 
-	return (str);
+	return (s);
 }
