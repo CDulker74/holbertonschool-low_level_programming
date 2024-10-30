@@ -13,11 +13,6 @@
  */
 char *leet(char *s)
 {
-    // Le reste de votre code ici
-}
-
-char *leet(char *s)
-{
 	int i, j;
 	char leet_letters[] = "aAeEoOtTlL";
 	char leet_numbers[] = "4433007711";
