@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _strncpy - copie une chaîne
- * @dest: chaîne de destination
- * @src: chaîne source
- * @n: nombre de caractères à copier
+ * _strncpy - copie une chaîn
+ * @dest: chaîne de destinatio
+ * @src: chaîne sourc
+ * @n: nombre de caractères à copi
  *
- * Return: pointeur vers la chaîne résultante dest
+ * Return: pointeur vers la chaîne résultante de
  */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -19,4 +19,4 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = '\0';
 
 	return (dest);
-}  
+}
