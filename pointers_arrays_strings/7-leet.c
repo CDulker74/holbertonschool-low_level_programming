@@ -2,23 +2,23 @@
 
 /**
  * leet - encode une chaîne en 1337
- * @str: chaîne à encodr
+ * @str: chaîne à encod
  *
  * Return: pointeur vers la chaîne encod�
  */
 char *leet(char *str)
 {
 	int i, j;
-	char leet_letters[] = "aAeEoOtTlL";
-	char leet_numbers[] = "4433007711";
+	char letters[] = "aAeEoOtTlL";
+	char numbers[] = "4433007711";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; leet_letters[j] != '\0'; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (str[i] == leet_letters[j])
+			if (str[i] == letters[j])
 			{
-				str[i] = leet_numbers[j];
+				str[i] = numbers[j];
 				break;
 			}
 		}
