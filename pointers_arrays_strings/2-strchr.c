@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * _strchr - Localise un caractere dans une chaine
@@ -20,5 +21,5 @@ s++;
 if (*s == c)
 return (s);
 
-return (NULL);
+return (0);
 }
