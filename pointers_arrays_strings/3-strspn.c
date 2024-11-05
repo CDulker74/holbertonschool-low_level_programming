@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * _strspn - Obtient la longueur d'un pr√©fixe sous-cha√e
