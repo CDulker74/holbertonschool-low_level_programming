@@ -40,5 +40,5 @@ char *str_concat(char *s1, char *s2)
 	/* Ajouter le caractère nul de fin */
 	concat[i] = '\0';
 
-	return (concat)
+	return (concat);
 }
