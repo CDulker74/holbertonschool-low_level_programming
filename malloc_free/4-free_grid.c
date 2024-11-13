@@ -20,6 +20,6 @@ void free_grid(int **grid, int height)
 		free(grid[i]);
 	}
 
-	/* Libérer le tableau de pointeurs 
+	/* Libérer le tableau de pointeurs */ 
 	free(grid)
 }
