@@ -21,5 +21,5 @@ void free_grid(int **grid, int height)
 	}
 
 	/* Libérer le tableau de pointeurs */ 
-	free(grid)
+	free(grid);
 }
