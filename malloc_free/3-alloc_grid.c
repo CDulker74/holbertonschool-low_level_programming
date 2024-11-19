@@ -1,32 +1,45 @@
 #include <stdlib.h>
+
 /**
-* alloc_grid - Returns a pointer to a 2 dimensional array of integers
-* @width: Width of the grid
-* @height: Height of the grid
-*
-* Return: Pointer to the 2D array, or NULL on failure
-*/
+ * alloc_grid - Alloue une grille 2D d'entiers
+ * @width: Largeur de la grille
+ * @height: Hauteur de la grille
+ *
+ * Description: Crée une grille 2D dynamique initialisée à zéro
+ * Return: Pointeur vers la grille, ou NULL en cas d'échec
+ */
 int **alloc_grid(int width, int height)
 {
-int **grid;
-int i, j;
-if (width <= 0 || height <= 0)
-return (NULL);
-grid = malloc(sizeof(int *) * height);
-if (grid == NULL)
-return (NULL);
-for (i = 0; i < height; i++)
-{
-grid[i] = malloc(sizeof(int) * width);
-if (grid[i] == NULL)
-{
-for (j = 0; j < i; j++)
-free(grid[j]);
-free(grid);
-return (NULL);
-}
-for (j = 0; j < width; j++)
-grid[i][j] = 0;
-}
-return (grid);
+    int **grille;
+    int i, j;
+
+    /* Vérification des dimensions invalides */
+    if (width <= 0 || height <= 0)
+        return (NULL);
+
+    /* Allocation du tableau de pointeurs pour les lignes */
+    grille = malloc(sizeof(int *) * height);
+    if (grille == NULL)
+        return (NULL);
+
+    /* Allocation de chaque ligne et initialisation à zéro */
+    for (i = 0; i < height; i++)
+    {
+        /* Allocation de la ligne courante */
+        grille[i] = malloc(sizeof(int) * width);
+        if (grille[i] == NULL)
+        {
+            /* Libération de la mémoire en cas d'échec */
+            for (j = 0; j < i; j++)
+                free(grille[j]);
+            free(grille);
+            return (NULL);
+        }
+
+        /* Initialisation de tous les éléments à zéro */
+        for (j = 0; j < width; j++)
+            grille[i][j] = 0;
+    }
+
+    return (grille);
 }
