@@ -11,7 +11,6 @@
  * séparés par la chaîne 'separator' si elle n'est pas NULL.
  * Une nouvelle ligne est imprimée à la fin.
  */
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
