@@ -13,17 +13,15 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
     dlistint_t *temp = *head;
     unsigned int i = 0;
 
-    // Si la liste est vide
     if (temp == NULL)
         return (-1);
 
-    // Cas de suppression du premier nœud
     if (index == 0)
     {
-        *head = temp->next;  // Met à jour la tête de la liste
-        if (*head != NULL)   // Si la liste n'est pas vide après suppression
+        *head = temp->next;
+        if (*head != NULL)
             (*head)->prev = NULL;
-        free(temp);          // Libère le nœud
+        free(temp);
         return (1);
     }
 
@@ -34,18 +32,16 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
         i++;
     }
 
-    // Vérifie si le nœud à supprimer existe
     if (temp == NULL)
         return (-1);
 
-    // Ajuste les pointeurs pour supprimer le nœud
     if (temp->prev != NULL)
-        temp->prev->next = temp->next;  // Met à jour le pointeur suivant du nœud précédent
+        temp->prev->next = temp->next;
 
     if (temp->next != NULL)
-        temp->next->prev = temp->prev;  // Met à jour le pointeur précédent du nœud suivant
+        temp->next->prev = temp->prev;
 
-    free(temp);  // Libère le nœud
+    free(temp);
 
-    return (1);  // Indique que la suppression a réussi
+    return (1);
 }
