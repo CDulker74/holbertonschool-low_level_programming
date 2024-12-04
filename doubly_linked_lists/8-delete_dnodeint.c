@@ -25,7 +25,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
         return (1);
     }
 
-    // Parcourt la liste pour trouver le nœud à supprimer
     while (temp != NULL && i < index)
     {
         temp = temp->next;
