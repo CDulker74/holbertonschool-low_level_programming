@@ -13,13 +13,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
     dlistint_t *temp = *head;
     unsigned int i = 0;
 
-    if (temp == NULL)  // Si la liste est vide
+    // Si la liste est vide
+    if (temp == NULL)
         return (-1);
 
     // Cas de suppression du premier nœud
     if (index == 0)
     {
-        *head = temp->next;  // Met à jour la tête
+        *head = temp->next;  // Met à jour la tête de la liste
         if (*head != NULL)   // Si la liste n'est pas vide après suppression
             (*head)->prev = NULL;
         free(temp);          // Libère le nœud
@@ -46,5 +47,5 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
     free(temp);  // Libère le nœud
 
-    return (1);
+    return (1);  // Indique que la suppression a réussi
 }
