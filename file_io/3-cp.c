@@ -9,11 +9,14 @@
  * error_exit - Affiche un message d'erreur et quitte le programme
  * @code: Code de sortie
  * @message: Message d'erreur à afficher
- * @filename: Nom du fichier concerné par l'erreur
+ * @arg: Argument supplémentaire (fichier ou descripteur de fichier)
  */
-void error_exit(int code, const char *message, const char *filename)
+void error_exit(int code, const char *message, void *arg)
 {
-dprintf(STDERR_FILENO, message, filename);
+if (code == 100)
+dprintf(STDERR_FILENO, message, *(int *)arg);
+else
+dprintf(STDERR_FILENO, message, (char *)arg);
 exit(code);
 }
 
@@ -30,7 +33,7 @@ char buffer[BUFFER_SIZE];
 mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 if (argc != 3)
-error_exit(97, "Usage: cp file_from file_to\n", "");
+error_exit(97, "Usage: cp file_from file_to\n", NULL);
 
 fd_from = open(argv[1], O_RDONLY);
 if (fd_from == -1)
@@ -51,10 +54,10 @@ if (rd == -1)
 error_exit(98, "Error: Can't read from file %s\n", argv[1]);
 
 if (close(fd_from) == -1)
-error_exit(100, "Error: Can't close fd %d\n", fd_from);
+error_exit(100, "Error: Can't close fd %d\n", &fd_from);
 
 if (close(fd_to) == -1)
-error_exit(100, "Error: Can't close fd %d\n", fd_to);
+error_exit(100, "Error: Can't close fd %d\n", &fd_to);
 
 return (0);
 }
