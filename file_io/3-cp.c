@@ -5,12 +5,12 @@
 
 #define BUFFER_SIZE 1024
 
-void error_exit(int code, const char *message, const char *filename) {
+void error_exit(int code, const char *message, const char *filename){
 dprintf(STDERR_FILENO, message, filename);
 exit(code);
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]){
 int fd_from, fd_to, rd, wr;
 char buffer[BUFFER_SIZE];
 mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
@@ -26,7 +26,7 @@ fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
 if (fd_to == -1)
 error_exit(99, "Error: Can't write to %s\n", argv[2]);
 
-while ((rd = read(fd_from, buffer, BUFFER_SIZE)) > 0) {
+while ((rd = read(fd_from, buffer, BUFFER_SIZE)) > 0){
 wr = write(fd_to, buffer, rd);
 if (wr != rd || wr == -1)
 error_exit(99, "Error: Can't write to %s\n", argv[2]);
@@ -41,5 +41,5 @@ error_exit(100, "Error: Can't close fd %d\n", fd_from);
 if (close(fd_to) == -1)
 error_exit(100, "Error: Can't close fd %d\n", fd_to);
 
-return 0;
+return (0);
 }
