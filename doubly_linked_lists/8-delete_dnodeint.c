@@ -28,7 +28,7 @@ return (1);
 while (temp != NULL && i < index)
 {
 temp = temp->next;
-i++
+i++;
 }
 
 if (temp == NULL)
