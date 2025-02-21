@@ -2,8 +2,8 @@
 
 /**
  * print_sign - Prints thr sign of a number
- * @n: The number to check 
- * 
+ * @n: The number to check
+ *
  * Return: 1 if n is greater than zero
  *         0 if n is zero,
  *        -1 if n is less than zero
