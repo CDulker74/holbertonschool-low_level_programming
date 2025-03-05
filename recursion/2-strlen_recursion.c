@@ -12,5 +12,5 @@ if (*s == '\0')
 {
 return (0);
 }
-return ((1 + _strlen_recursions + 1));
+return ((1 + _strlen_recursions + 1;));
 }
