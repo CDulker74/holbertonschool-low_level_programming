@@ -18,11 +18,11 @@ return (_sqrt_helper(n, i + 1));
 
 /**
  * _sqrt_recursion - Returns the natural square root of a number
- * @n: The number to find the square rppt pg
+ * @n: The number to find the square root of
  *
  * Return: The natural square root of n, or -1 if it doesn't exist
  */
-int _sqrt_recurison(int n)
+int _sqrt_recursion(int n)
 {
 if (n < 0)
 return (-1);
