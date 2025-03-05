@@ -15,7 +15,7 @@ if (i * i > n)
 return (1);
 if (n % i == 0)
 return (0);
-return (_is_prime_helper(n, i + 1));
+return (is_prime_helper(n, i + 1));
 }
 
 /**
