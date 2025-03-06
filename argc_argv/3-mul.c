@@ -8,13 +8,13 @@
  *
  * Return: 0 if successful, 1 if error
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 int num1, num2, result;
 
 if (argc != 3)
 {
-printf("Error\n")
+printf("Error\n");
 return (1);
 }
 
