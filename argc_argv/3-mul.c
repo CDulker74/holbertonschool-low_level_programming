@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 /**
- * main - Multiplie deux nombres
- * @argc: Le nombre d'arguments de la ligne de commande
- * @argv: Un tableau contenant les arguments de la ligne de commande
+ * main - Multiplies two numbers
+ * @argc: Number of arguments
+ * @argv: Array of arguments
  *
- * Return: 0 si réussi, 1 en cas d'erreur
+ * Return: 0 if successful, 1 if there is an error
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 int num1, num2, result;
 
