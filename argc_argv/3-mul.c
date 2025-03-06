@@ -8,7 +8,7 @@
  *
  * Return: 0 si réussi, 1 en cas d'erreur
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv)
 {
 int num1, num2, result;
 
