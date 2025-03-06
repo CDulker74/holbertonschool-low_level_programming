@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * main - Multiplies two numbers
- * @argc: The number of command line arguments
- * @argv: An array containing the program command line arguments
+ * main - Multiplie deux nombres
+ * @argc: Le nombre d'arguments de la ligne de commande
+ * @argv: Un tableau contenant les arguments de la ligne de commande
  *
- * Return: 0 if successful, 1 if error
+ * Return: 0 si réussi, 1 en cas d'erreur
  */
 int main(int argc, char *argv[])
 {
@@ -26,4 +26,3 @@ printf("%d\n", result);
 
 return (0);
 }
-
